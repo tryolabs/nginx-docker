@@ -12,6 +12,8 @@ RUN apt-get update && \
     easy_install j2cli && \
     apt-get purge -y --auto-remove && rm -rf /var/lib/apt/lists/*
 
+RUN ln -sf /dev/stdout /var/log/nginx/static.log
+
 COPY ./mime.types /etc/nginx/mime.types
 COPY ./h5bp /etc/nginx/h5bp
 
