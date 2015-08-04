@@ -19,6 +19,9 @@ COPY ./h5bp /etc/nginx/h5bp
 COPY /templates /templates
 COPY ./docker-entrypoint.sh /
 
+# Directory for extra initialization scripts
+RUN mkdir /docker-entrypoint-init.d
+
 EXPOSE 80 443
 CMD ["nginx"]
 ENTRYPOINT ["/docker-entrypoint.sh"]
