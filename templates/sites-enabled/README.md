@@ -1,1 +1,0 @@
-See https://github.com/h5bp/server-configs-nginx/blob/master/doc/sites-enabled.md#enabling-a-new-site
